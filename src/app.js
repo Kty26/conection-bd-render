@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 require('dotenv').config();
 
 
@@ -17,6 +18,7 @@ db.sync()//devuelve una promesa// SI NO EXISTE la tabla, LA CREA
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 //----------CRUD --------
 //  create 
